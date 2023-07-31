@@ -5,7 +5,7 @@ import { StreamingTextResponse } from "ai";
 
 export async function POST(req: Request) {
   const { messages } = await req.json();
-  const response = await fetch("http://127.0.0.1:5000/poetry", {
+  const response = await fetch(process.env.BACK_URL + "/poetry", {
     method: "POST",
     body: JSON.stringify({ messages }),
     headers: { "Content-Type": "application/json" },
