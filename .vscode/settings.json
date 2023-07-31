@@ -1,0 +1,10 @@
+{
+  "cSpell.words": [
+    "langchain",
+    "llms"
+  ],
+  "conventionalCommits.scopes": [
+    "back/front",
+    "app"
+  ]
+}

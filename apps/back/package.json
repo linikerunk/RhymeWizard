@@ -1,0 +1,12 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.py",
+  "scripts": {
+    "dev": "flask --app server run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
