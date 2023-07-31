@@ -16,3 +16,7 @@ def poetry():
     if not body.get("messages"):
         return {"status_code": 400, "error": "field \"messages\" must be required"}, 400
     return poetry_chain(body["messages"]), {"Content-Type": "text/plain"}
+
+
+if __name__ == "__main__":
+    app.run(debug=False, threaded=True)
