@@ -13,18 +13,22 @@ import os
 
 def chain_thread(generator: ThreadedGenerator, template: str, prompt: str) -> None:
     try:
-        system_message_prompt = SystemMessagePromptTemplate.from_template(template)
+        system_message_prompt = SystemMessagePromptTemplate.from_template(
+            template)
         human_template = "{text}"
-        human_message_prompt = HumanMessagePromptTemplate.from_template(human_template)
+        human_message_prompt = HumanMessagePromptTemplate.from_template(
+            human_template)
 
-        chat_prompt = ChatPromptTemplate.from_messages([system_message_prompt, human_message_prompt])
+        chat_prompt = ChatPromptTemplate.from_messages(
+            [system_message_prompt, human_message_prompt])
         chain = LLMChain(
             llm=ChatOpenAI(
-                    streaming=True, 
-                    temperature=0.9, 
-                    callback_manager=BaseCallbackManager([ChainStreamHandler(generator)]),
-                    openai_api_key=os.getenv("OPENAI_API_KEY")
-                ),
+                streaming=True,
+                temperature=0.9,
+                callback_manager=BaseCallbackManager(
+                    [ChainStreamHandler(generator)]),
+                openai_api_key=os.getenv("OPENAI_API_KEY")
+            ),
             prompt=chat_prompt,
         )
 

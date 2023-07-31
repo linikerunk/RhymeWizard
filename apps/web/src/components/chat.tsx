@@ -25,7 +25,7 @@ export default function Chat() {
                   ? (
                     <Avatar>
                       <AvatarFallback>RF</AvatarFallback>
-                      <AvatarImage src="https://github.com/rofram.png" />
+                      <AvatarImage src="https://github.com/linikerunk.png" />
                     </Avatar>
                   )
                   : (
@@ -36,7 +36,7 @@ export default function Chat() {
                   )}
                 <p className="leading-relaxed">
                   <b className="block font-bold text-slate-700">{message. role === 'user' ? 'User' : 'Poetry'}:</b>
-                  {message.content}
+                  <p dangerouslySetInnerHTML={{ __html: message.content }} />
                 </p>
               </div>
             ))}

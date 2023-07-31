@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.py",
   "scripts": {
-    "dev": "flask --app server run"
+    "start": "flask --app server run"
   },
   "keywords": [],
   "author": "",

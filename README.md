@@ -1,3 +1,7 @@
+# Image about RhymeWizard
+
+![Cover Image](assets/Poemy-Screen.png)
+
 # Turborepo starter
 
 This is an official starter Turborepo.
@@ -31,5 +35,6 @@ npm i
 cd apps/back
 pip install -r requirements.txt
 cd ../..
-npm run dev
+npm run build
+npm run start
 ```
